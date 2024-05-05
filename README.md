@@ -6,3 +6,5 @@ Projeto de desenvolvimento de um jogo de memória. O projeto foi proposto pelo p
 2. [João Paulo](https://github.com/Joao-Porto-23)
 3. [Vinicius Hott](https://github.com/Hott10)
 4. [Maria Eduarda Lopes](https://github.com/Lopesduda28)
+
+#### [Acesse o Jogo aqui!](https://sales16.github.io/projeto-memory-game/)
