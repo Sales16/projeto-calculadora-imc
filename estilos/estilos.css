@@ -24,3 +24,14 @@ label {
     display: block;
     margin-top: 15px;
 }
+.botao {
+    display: inline-block;
+    
+    border-radius: 10px;
+}
+
+div.container > div {
+    background-color: rgba(128, 128, 128, 0.568);
+    padding: 30px;
+    border-radius: 10px;
+}
