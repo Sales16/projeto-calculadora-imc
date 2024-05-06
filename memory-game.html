@@ -9,6 +9,24 @@
     <script src="js/scripts.js" defer></script>
 </head>
 <body>
-    
+    <div class="container">
+        <div>
+            <div>
+                <form id="form" >
+                    <label for="peso">Peso</label>
+                    <input type="number" id="peso" name="peso" placeholder="Peso KG" required>
+                    <label for="altura">Altura</label>
+                    <input type="number" id="altura" name="altura" placeholder="altura" required>
+                    <input type="submit" onclick="calcularIMC()" name="calcular" id="icalc">
+                    <input type="reset">
+                </form>
+            </div>
+            <div class="result">
+                <p id="resultado">
+
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
