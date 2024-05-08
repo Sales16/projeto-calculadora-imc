@@ -1,66 +1,169 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Noto Sans", sans-serif;
+}
+:root {
+    --cor1:#012938;
+    --cor2:#0388A6;
+    --cor3:#025E73;
+    --cor4:#80DDF2;
+    --cor5:#04ADBF;
+
+    --corA: #e06d6d;
+    --corB: #ffae00;
+    --corC: #469746;
+    --corD: #ad0202;
+    --corE: #5f1616;
 }
 
-html {
-    background-color: rgb(70, 70, 70);
-}
-
-main {
-    background-color: rgba(134, 68, 196, 0.582);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -70%);
-    width: 300px;
-    height: 350px;
-    padding: 25px;
-    border-radius: 10px;
-}
-
-h1 {
+::-webkit-input-placeholder {
+    color: rgb(184, 184, 184);
+ }
+ 
+body {
+    background-color:var(--cor1);
     color: white;
-    text-align: center;
-    margin-top: 50px;
 }
+
+.main-calc {
+    background-color: var(--cor3);
+    position: absolute;
+    height: 500px;
+    width: 330px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: block;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2em;
+    background-color: var(--cor2);
+    padding: 0px 20px 0px 20px;
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+}
+
 
 label {
     display: block;
+    font-size: 1.8em;
     text-align: center;
-    padding: 15px;
-    font-size: 2em;
-    font-weight: bolder;
+    margin-top: 20px;
+    padding: 5px;
 }
 
-div.altura > input, div.peso > input {
-    padding: 15px 50px;
+input.valor{
     display: block;
+    padding: 15px 0px 15px 0px;
+    width: 90%;
+    text-indent: 20px;
     margin: auto;
     border-radius: 10px;
     border: none;
+    background-color:#1b3e46;
+    color: white;
+}
 
+div.botoes {
+    margin-top: 40px ;
 }
-.botao {
-    padding: 15px 40px;
-    border: none;
-    border-radius: 10px;
-    margin: 7px;
-    cursor: pointer;
-    
-}
-.botoes {
-    margin-top: 30px;
+
+button {
     display: block;
-    text-align: center;
+    margin: auto;
+    width: 80%;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    margin-top: 15px;
+    font-weight: bolder;
+    font-size: 20px;
 }
 
-p {
-    color:white;
-    text-align: center;
-    font-size: 1.5em;
-    margin-top: 10px;
+.bt-calc {
+    background-color: var(--cor5);
 }
+.bt-calc:hover {
+    background-color: #337381;
+    color: white;
+}
+.bt-reset {
+    background-color: white;
+    border: 3px solid rgb(212, 99, 99);
+    color: rgb(212, 99, 99);
+}
+.bt-reset:hover {
+    background-color: rgb(212, 99, 99);
+    color: white;
+}
+
+main.main-result {
+    background-color: var(--cor3);
+    position: absolute;
+    height: 540px;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: none;
+}
+section#resultado > h1 {
+    margin-bottom: 20px;
+}
+section#resultado > p {
+    text-align: center;
+    font-size: 1.3em;
+    color: var(--corA);
+}
+
+table {
+    width: 95%;
+    margin: 10px auto;
+    border-collapse: collapse;
+}
+
+caption {
+    caption-side: top;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 5px 0;
+}
+
+th, td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+th {
+    border-top: 1px solid #ddd;
+    background-color: var(--cor1);
+}
+
+.peso {
+    text-align: right;
+    border-right: 1px solid #ddd;
+}
+
+.sit {
+    text-align: left;
+}
+
+.oculta {
+    display: none;
+}
+

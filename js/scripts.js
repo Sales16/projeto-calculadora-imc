@@ -1,31 +1,31 @@
-const form = document.getElementById('form');
-form.addEventListener('submit', function(event){
-    event.preventDefault();
-})
-
-let botaoCalcular = document.getElementById("calcular");
-botaoCalcular.addEventListener("click", calcularIMC);
-
-let botaoReset = document.getElementById("resetar");
-botaoReset.addEventListener("click", reset);
-
 document.addEventListener("keypress", function (e) {
     if (e.key === 'Enter') {
-        calcularIMC();
+        toggleDisplay();
     }
 });
 
-function calcularIMC() {
-    let altura = document.getElementById("altura").value
-    let peso = document.getElementById("peso").value;
-    let resultado = document.getElementById("resultado");
+function toggleDisplay() {
+    var calcElement = document.querySelector('.main-calc');
+    var resultElement = document.querySelector('.main-result');
 
-    let imc = (peso / ((altura / 100) ** 2)).toFixed(2);
-    resultado.textContent = 'Seu IMC é ' + imc;
-    console.log(imc);
+    // Verifica o estado atual da exibição e alterna
+    if (calcElement.style.display === 'block') {
+        calcElement.style.display = 'none';
+        resultElement.style.display = 'block';
+    } else {
+        calcElement.style.display = 'block';
+        resultElement.style.display = 'none';
+    }
 }
 
-function reset() {
-    let resultado = document.getElementById("resultado");
-    resultado.textContent = '';    
+function calcular(){
+    let altura = document.getElementById("ialtura").value;
+    let peso = document.getElementById("ipeso").value;
+    // altura = altura.replace(/,/g, '');
+    // altura = altura.replace(/./g, '');
+    altura = altura / 100;
+    console.log(altura);
+    console.log(peso);
+    imc = peso / (altura * altura);
+    console.log(imc);
 }

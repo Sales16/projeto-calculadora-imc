@@ -11,27 +11,74 @@
 </head>
 
 <body>
-    <h1>Calculadora de IMC</h1>
-    <main>
-        <form id="form">
-            <div class="altura">
-                <label for="altura">Altura</label>
-                <input type="number" id="altura" name="altura" placeholder="Altura" required>
-            </div>
-            <div class="peso">
-                <label for="peso">Peso</label>
-                <input type="number" id="peso" name="peso" placeholder="Peso KG" required>
-            </div>
+    <main class="main-calc">
+        <section id="calculadora">
+            <h1>Calculadora de IMC</h1>
+            <form>
+                <div>
+                    <label for="ialtura">Altura</label>
+                    <input class="valor" type="number" name="alt" id="ialtura" placeholder="Altura em cm" required>
+                </div>
+                <div>
+                    <label for="ipeso">Peso</label>
+                    <input class="valor" type="number" name="peso" id="ipeso" placeholder="Peso em kg" required>
+                </div>
+            </form>
             <div class="botoes">
-                <input class="botao" type="submit" value="Calcular" id="calcular">
-                <input class="botao" type="reset" value="Redefinir" id="resetar">
+                <button class="bt-calc">Calcular</button>
+                <button class="bt-reset" onclick="calcular()">Limpar</button>
             </div>
-            <div class="result">
-                <p id="resultado">
-
-                </p>
-            </div>
-        </form>
+        </section>
+    </main>
+    <main class="main-result">
+        <section id="resultado">
+            <h1>Resultado</h1>
+            <p>SEU IMC é 1231</p>
+            <p>ACIMA DO PESO</p>
+            <table>
+                <caption>Tabela de IMC</caption>
+                <colgroup>
+                    <col class="peso">
+                    <col class="sit">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">Peso</th>
+                        <th scope="col">Situação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #e06d6d;">
+                        <td>Abaixo de 17</td>
+                        <td>Muito Abaixo do peso</td>
+                    </tr>
+                    <tr style="background-color: #ffae00;">
+                        <td>Entre 17 e 18,49</td>
+                        <td>Abaixo do peso</td>
+                    </tr>
+                    <tr style="background-color: #469746;">
+                        <td>Entre 18,5 e 24,99</td>
+                        <td>Peso normal</td>
+                    </tr>
+                    <tr style="background-color: #ffae00;">
+                        <td>Entre 25 e 29,99</td>
+                        <td>Acima do peso</td>
+                    </tr>
+                    <tr style="background-color: #e06d6d;">
+                        <td>Entre 30 e 34,99</td>
+                        <td>Obesidade I</td>
+                    </tr>
+                    <tr style="background-color: #ad0202;">
+                        <td>Entre 35 e 39,99</td>
+                        <td>Obesidade II (severa)</td>
+                    </tr>
+                    <tr style="background-color: #5f1616;">
+                        <td>Acima de 40</td>
+                        <td>Obesidade III (mórbida)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
 </body>
 
