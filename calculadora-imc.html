@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo da Memória</title>
+    <title>Calculadora de IMC</title>
     <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/medias.css">
     <link rel="shortcut icon" href="imagens/icone.ico" type="image/x-icon">
     <script src="js/scripts.js" defer></script>
 </head>
@@ -17,30 +18,26 @@
             <form>
                 <div>
                     <label for="ialtura">Altura</label>
-                    <input class="valor" type="number" name="alt" id="ialtura" placeholder="Altura em cm" required>
+                    <input class="valor teste" type="number" name="alt" id="ialtura" placeholder="Altura em cm" required>
                 </div>
                 <div>
                     <label for="ipeso">Peso</label>
-                    <input class="valor" type="number" name="peso" id="ipeso" placeholder="Peso em kg" required>
+                    <input class="valor teste" type="number" name="peso" id="ipeso" placeholder="Peso em kg" required>
                 </div>
             </form>
             <div class="botoes">
-                <button class="bt-calc">Calcular</button>
-                <button class="bt-reset" onclick="calcular()">Limpar</button>
+                <button id="botao-calcular" class="bt-calc">Calcular</button>
+                <button id="botao-limpar" class="bt-reset" >Limpar</button>
             </div>
         </section>
     </main>
     <main class="main-result">
         <section id="resultado">
             <h1>Resultado</h1>
-            <p>SEU IMC é 1231</p>
-            <p>ACIMA DO PESO</p>
+            <p id="imc"></p>
+            <p id="situacao">ACIMA DO PESO</p>
             <table>
                 <caption>Tabela de IMC</caption>
-                <colgroup>
-                    <col class="peso">
-                    <col class="sit">
-                </colgroup>
                 <thead>
                     <tr>
                         <th scope="col">Peso</th>
@@ -78,6 +75,7 @@
                     </tr>
                 </tbody>
             </table>
+            <button id="botao-voltar" class="bt-voltar">Votlar</button>
         </section>
     </main>
 </body>
