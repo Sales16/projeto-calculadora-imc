@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+:root {
+    --cor1:#012938;
+    --cor2:#0388A6;
+    --cor3:#025E73;
+    --cor4:#80DDF2;
+    --cor5:#04ADBF;
+
+    --corA: #e06d6d;
+    --corB: #ffae00;
+    --corC: #469746;
+    --corD: #ad0202;
+    --corE: #5f1616;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+
+    };
+}
+
+@media screen and (min-width: 992px) { 
+    body {
+        
+    };
+
+}
