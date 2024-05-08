@@ -54,8 +54,6 @@ function calcular() {
     imc = imc.toFixed(2);
 
     let situ = situacao(imc)
-    console.log(typeof(situ))
-    console.log(situ)
 
     let resultDoCalc = {
         data: dataCalc,
