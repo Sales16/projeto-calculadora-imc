@@ -190,14 +190,15 @@ th {
     display: none;
 }
 
-.teste {
+.zoom {
     transition: transform 0.3s ease;
     transform: scale(1);
 }
 
-.teste:hover {
+.zoom:hover {
     transform: scale(1.05);
 }
 
-.teste:focus {
+.zoom:focus {
     transform: scale(1.05);
+}
