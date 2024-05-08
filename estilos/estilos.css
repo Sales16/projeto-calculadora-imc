@@ -2,17 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
-    padding: 0;
-    margin: 0;
-    font-family: "Noto Sans", sans-serif;
-}
 :root {
-    --cor1:#012938;
-    --cor2:#0388A6;
-    --cor3:#025E73;
-    --cor4:#80DDF2;
-    --cor5:#04ADBF;
+    --cor1: #012938;
+    --cor2: #0388A6;
+    --cor3: #025E73;
+    --cor4: #80DDF2;
+    --cor5: #04ADBF;
 
     --corA: #e06d6d;
     --corB: #ffae00;
@@ -21,12 +16,28 @@
     --corE: #5f1616;
 }
 
-::-webkit-input-placeholder {
-    color: rgb(184, 184, 184);
- }
- 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Noto Sans", sans-serif;
+}
+
 body {
-    background-color:var(--cor1);
+    background-color: var(--cor1);
     color: white;
 }
 
@@ -42,6 +53,7 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     display: block;
 }
+
 h1 {
     text-align: center;
     margin-bottom: 10px;
@@ -50,8 +62,8 @@ h1 {
     padding: 0px 20px 0px 20px;
     border-radius: 10px 10px 0px 0px;
     overflow: hidden;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
 }
-
 
 label {
     display: block;
@@ -59,22 +71,24 @@ label {
     text-align: center;
     margin-top: 20px;
     padding: 5px;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
 }
 
-input.valor{
+input.valor {
     display: block;
     padding: 15px 0px 15px 0px;
     width: 90%;
     text-indent: 20px;
     margin: auto;
     border-radius: 10px;
-    border: none;
-    background-color:#1b3e46;
+    border: 0;
+    background-color: #1b3e46;
     color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
 }
 
 div.botoes {
-    margin-top: 40px ;
+    margin-top: 40px;
 }
 
 button {
@@ -88,20 +102,25 @@ button {
     margin-top: 15px;
     font-weight: bolder;
     font-size: 20px;
+    box-shadow: 0px 0px 5dvb rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
 }
 
 .bt-calc {
     background-color: var(--cor5);
 }
+
 .bt-calc:hover {
     background-color: #337381;
     color: white;
 }
+
 .bt-reset {
     background-color: white;
     border: 3px solid rgb(212, 99, 99);
     color: rgb(212, 99, 99);
 }
+
 .bt-reset:hover {
     background-color: rgb(212, 99, 99);
     color: white;
@@ -110,7 +129,7 @@ button {
 main.main-result {
     background-color: var(--cor3);
     position: absolute;
-    height: 540px;
+    height: 610px;
     width: 350px;
     top: 50%;
     left: 50%;
@@ -119,19 +138,25 @@ main.main-result {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     display: none;
 }
-section#resultado > h1 {
+
+section#resultado>h1 {
+    padding: 8px;
     margin-bottom: 20px;
 }
-section#resultado > p {
+
+section#resultado>p {
     text-align: center;
     font-size: 1.3em;
     color: var(--corA);
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+    font-weight: bolder;
 }
 
 table {
-    width: 95%;
+    width: 90%;
     margin: 10px auto;
     border-collapse: collapse;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.596);
 }
 
 caption {
@@ -140,10 +165,12 @@ caption {
     font-weight: bold;
     font-size: 1.2em;
     padding: 5px 0;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
 }
 
-th, td {
-    padding: 8px;
+th,
+td {
+    padding: 7px;
     border-bottom: 1px solid #ddd;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
@@ -152,18 +179,25 @@ th, td {
 th {
     border-top: 1px solid #ddd;
     background-color: var(--cor1);
+    padding: 10px;
 }
 
-.peso {
-    text-align: right;
-    border-right: 1px solid #ddd;
-}
-
-.sit {
-    text-align: left;
+.bt-voltar:hover {
+    background-color: #c5c5c5;
 }
 
 .oculta {
     display: none;
 }
 
+.teste {
+    transition: transform 0.3s ease;
+    transform: scale(1);
+}
+
+.teste:hover {
+    transform: scale(1.05);
+}
+
+.teste:focus {
+    transform: scale(1.05);
