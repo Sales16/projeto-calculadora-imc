@@ -1,41 +1,45 @@
 @charset "UTF-8";
 
-:root {
-    --cor1:#012938;
-    --cor2:#0388A6;
-    --cor3:#025E73;
-    --cor4:#80DDF2;
-    --cor5:#04ADBF;
-
-    --corA: #e06d6d;
-    --corB: #ffae00;
-    --corC: #469746;
-    --corD: #ad0202;
-    --corE: #5f1616;
+@media screen and (min-width: 768px) and (max-width: 1450px) {
+    .main-calc{
+        height: 500px;
+        width: 430px;
+        transition: left .3s;
+    }
+    h1 {
+        padding: 20px;
+    }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1450px) {
     .main-calc{
         left: 70%;
+        height: 500px;
+        width: 430px;
+        transition: left .3s;
     }
-    .imgTst {
+    .main-result {
+        left: 70%;
+        transition: left .3s;
+    }
+    h1 {
+        padding: 20px;
+    }
+    .divImg {
         display: block;
         position: absolute;
-        left: 30%;
-        top: 50%;
+        left: 20%;
+        top: 35%;
         transform: translate(-50%, -50%);
-
-        
+        animation: float 3s ease-in-out infinite;
     }
-
-}
-
-
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-
-}
-
-@media screen and (min-width: 992px) { 
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
 
 }
