@@ -8,7 +8,7 @@ btLimpar.addEventListener("click", limpar);
 let btVoltar = document.getElementById("botao-voltar");
 btVoltar.addEventListener("click", toggleDisplay);
 
-// Evento para a troca de tela
+// Evento para a troca de tela com enter
 document.addEventListener("keypress", function (e) {
     if (e.key === 'Enter') {
         var calculadora = document.querySelector('.main-calc');
@@ -95,7 +95,7 @@ function validarAltura(altura) {
 // Função para validar o peso (Tratamento para deixar em kg)
 function validarPeso(peso) {
     let pesoLimpo = peso.replace(/[,]/g, '.');
-    let pesoNumerico = parseInt(pesoLimpo, 10);
+    let pesoNumerico = parseFloat(pesoLimpo, 10);
     if (pesoNumerico < 0) {
         alert("O peso não pode ser negativa.");
         return;
