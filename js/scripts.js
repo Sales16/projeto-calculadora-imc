@@ -1,3 +1,4 @@
+// Ações dos eventos do botão
 let btCalc = document.getElementById("botao-calcular");
 btCalc.addEventListener("click", calcular);
 
@@ -7,7 +8,7 @@ btLimpar.addEventListener("click", limpar);
 let btVoltar = document.getElementById("botao-voltar");
 btVoltar.addEventListener("click", toggleDisplay);
 
-
+// Evento para a troca de tela
 document.addEventListener("keypress", function (e) {
     if (e.key === 'Enter') {
         var calculadora = document.querySelector('.main-calc');
@@ -20,6 +21,7 @@ document.addEventListener("keypress", function (e) {
     }
 });
 
+// Função para a troca de tela
 function toggleDisplay() {
     var calculadora = document.querySelector('.main-calc');
     var resultado = document.querySelector('.main-result');
@@ -33,6 +35,7 @@ function toggleDisplay() {
     }
 }
 
+// Função para calcular O IMC
 function calcular() {
     let dataCalc = new Date().toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
 
@@ -69,8 +72,7 @@ function calcular() {
     mostrarResultado(imc, situ)
 }
 
-
-
+// Função para validar a altura (Tratamento para deixar em metros)
 function validarAltura(altura) {
     let alturaLimpa = altura.replace(/[.,]/g, '');
     while (alturaLimpa.length < 3) {
@@ -90,6 +92,7 @@ function validarAltura(altura) {
     }
 }
 
+// Função para validar o peso (Tratamento para deixar em kg)
 function validarPeso(peso) {
     let pesoLimpo = peso.replace(/[,]/g, '.');
     let pesoNumerico = parseInt(pesoLimpo, 10);
@@ -100,6 +103,7 @@ function validarPeso(peso) {
     return pesoNumerico;
 }
 
+// Função para mostrar o resultado na tabela
 function mostrarResultado(imc, situacao) {
     pImc = document.getElementById("imc");
     pSituacao = document.getElementById("situacao");
@@ -107,6 +111,7 @@ function mostrarResultado(imc, situacao) {
     pSituacao.textContent = `Situação ${situacao}`
 }
 
+// Função para mostrar a situação do IMC (7 casos)
 function situacao(imc) {
     pImc = document.getElementById("imc");
     pSituacao = document.getElementById("situacao");
@@ -147,6 +152,7 @@ function situacao(imc) {
     }
 }
 
+// Função para salvar o resultado no histórico
 function historicoCalc(resultado) {
     let historico = recuperarHistoricoCalc();
 
@@ -156,6 +162,7 @@ function historicoCalc(resultado) {
     localStorage.setItem("historico", historico)
 }
 
+// Função para recuperar o resultado do histórico
 function recuperarHistoricoCalc() {
     let historico = localStorage.getItem("historico")
 
@@ -166,7 +173,7 @@ function recuperarHistoricoCalc() {
     return historicoConvertido;
 }
 
-
+// Função para limpar os valores da calculadora
 function limpar() {
     let altura = document.getElementById("ialtura");
     let peso = document.getElementById("ipeso");
