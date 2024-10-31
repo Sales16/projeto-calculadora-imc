@@ -1,6 +1,8 @@
 # Projeto Calculadora de IMC
 Projeto de desenvolvimento de uma calculadora de índice de massa corporal (IMC). O projeto foi proposto pelo professor [Airton](https://github.com/airtonbjunior) da disciplina Programação para Web.
 
+Acesse [clicando aqui](https://sales16.github.io/projeto-calculadora-imc/)
+
 ## Sobre o projeto
 Nos fizemos uma calculado que calcula o índice de massa corporal (IMC) com base na sua altura e peso. Começamos com o Mobile First, e depois as versões para tablet e pc. Nosso projeto é totalmente responsivo, usado medias queries para essa responsividade.
 
