@@ -19,6 +19,6 @@ Não foi usado nenhuma biblioteca ou famework como as intruções do projeto ped
 4. [Maria Eduarda Lopes](https://github.com/Lopesduda28)
 
 ## Menção
-Não disponivel no momento...
+SS
 
 ### [Acesse a calculadora aqui!](https://sales16.github.io/projeto-calculadora-imc/)
